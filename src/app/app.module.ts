@@ -32,6 +32,10 @@ import {NavBarModule} from './shared/navbar';
 import {FooterModule} from './shared/footer';
 import {MatDividerModule} from '@angular/material/divider';
 import { LoginComponent } from './pages/login/login.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: { title: 'Home' } },
@@ -39,7 +43,7 @@ export const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LoginComponent],
+  declarations: [AppComponent, HomeComponent, LoginComponent, MainNavComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -54,7 +58,7 @@ export const appRoutes: Routes = [
     BrowserAnimationsModule,
     NavBarModule, FooterModule,
     NgxAudioPlayerModule,
-    RouterModule.forRoot(appRoutes, {useHash: false}), MatDividerModule
+    RouterModule.forRoot(appRoutes, {useHash: false}), MatDividerModule, LayoutModule, MatSidenavModule, MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
