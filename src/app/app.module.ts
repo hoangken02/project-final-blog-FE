@@ -32,6 +32,7 @@ import {NavBarModule} from './shared/navbar';
 import {FooterModule} from './shared/footer';
 import {MatDividerModule} from '@angular/material/divider';
 import { LoginComponent } from './pages/login/login.component';
+import { TexteditorComponent } from './texteditor/texteditor.component';
 
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: { title: 'Home' } },
@@ -39,7 +40,7 @@ export const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LoginComponent],
+  declarations: [AppComponent, HomeComponent, LoginComponent, TexteditorComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
