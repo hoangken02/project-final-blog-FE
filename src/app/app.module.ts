@@ -32,6 +32,10 @@ import {NavBarModule} from './shared/navbar';
 import {FooterModule} from './shared/footer';
 import {MatDividerModule} from '@angular/material/divider';
 import { LoginComponent } from './pages/login/login.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 import { TexteditorComponent } from './texteditor/texteditor.component';
 
 export const appRoutes: Routes = [
@@ -40,7 +44,7 @@ export const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LoginComponent, TexteditorComponent],
+  declarations: [AppComponent, HomeComponent, LoginComponent, TexteditorComponent,MainNavComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
