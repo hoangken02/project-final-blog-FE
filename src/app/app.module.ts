@@ -46,6 +46,9 @@ export const appRoutes: Routes = [
 @NgModule({
   declarations: [AppComponent, HomeComponent, LoginComponent, TexteditorComponent,MainNavComponent],
   imports: [
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule,
     HttpClientModule,
     BrowserModule,
     FontAwesomeModule,
