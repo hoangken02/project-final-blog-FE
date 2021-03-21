@@ -1,0 +1,21 @@
+<h2>Create Category</h2>
+<div style="text-align: center">
+    <mat-form-field appearance="fill" style="width: 500px"
+                    [formGroup]="categoryForm"
+                    (submit)="submit()">
+        <mat-label>Name</mat-label>
+        <input matInput style="width: 500px">
+
+        <mat-error *ngIf="categoryForm.hasError('required')">
+            Please input in name category!
+        </mat-error>
+    </mat-form-field>
+    <div class="example-button-row">
+        <button>Create</button>
+        <button type="reset">Reset</button>
+        <!--        <button mat-raised-button color="primary">Create</button>-->
+    </div>
+</div>
+
+
+
