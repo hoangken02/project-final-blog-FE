@@ -17,9 +17,9 @@ export class UserUpdateComponent implements OnInit {
 
   userForm: FormGroup = new FormGroup({
     name: new FormControl(''),
-    name: new FormControl(''),
-    name: new FormControl(''),
-    name: new FormControl('')
+    firstname: new FormControl(''),
+    lastname: new FormControl(''),
+    email: new FormControl('')
   });
 
   constructor(private userService: UserService,
@@ -38,16 +38,17 @@ export class UserUpdateComponent implements OnInit {
     this.userService.findById(id).subscribe(value => {
       // @ts-ignore
       this.user = value.data;
-      this.categoryForm = new FormGroup({
-        name: new FormControl(this.user.name)
+      this.userForm = new FormGroup({
+        name: new FormControl(this.user),
+
       });
     });
   }
 
   updateUser(id?: number) {
     let user = this.userForm.value;
-    console.log(category);
-    this.userService.updateCategory(id, category).subscribe(() => {
+    console.log(user);
+    this.userService.updateCategory(id, user).subscribe(() => {
         alert('Created successfully');
       },
       () => alert('Not created')

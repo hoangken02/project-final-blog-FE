@@ -47,6 +47,7 @@ import {CommonModule} from '@angular/common';
 import {AdminComponent} from './admin/admin/admin.component';
 import {JwtModule} from '@auth0/angular-jwt';
 import {UserUpdateComponent} from './admin/user/user-update/user-update.component';
+import {UserModule} from './user/user.module';
 
 export const appRoutes: Routes = [
   {
@@ -93,6 +94,7 @@ export const appRoutes: Routes = [
     NavBarModule, FooterModule,
     NgxAudioPlayerModule,
     AdminModule,
+    UserModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: function tokenGetter() {

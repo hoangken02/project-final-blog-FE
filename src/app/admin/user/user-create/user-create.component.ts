@@ -23,7 +23,8 @@ export class UserCreateComponent implements OnInit {
 
   constructor(private userService: UserService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.userForm;
   }
 
   submit() {
